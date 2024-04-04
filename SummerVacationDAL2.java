@@ -1,16 +1,12 @@
-package src;
+
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.beans.Statement;
-import java.sql.Connection;
-import java.sql.SQLDataException;
-import java.sql.ResultSet;
 
 public class SummerVacationDAL2
 {
-    private Connection connection;
+    protected Connection connection;
 
 
     private void InitializeConnection(String databaseName, String user, String password)
@@ -32,12 +28,11 @@ public class SummerVacationDAL2
     {
         InitializeConnection(databaseName, userName, password);
     }
-
     public SummerVacationDAL2() {
-        //TODO Auto-generated constructor stub
+    
     }
 
-    public List<String> TryGetDestinationForActivity(String activityName)
+    public List<String> TryGetDestinationForActivity(String activityName) throws SQLException
     {
         List<String> parks = new ArrayList<String>();
         try

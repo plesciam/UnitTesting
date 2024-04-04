@@ -1,4 +1,4 @@
-package src;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -49,4 +49,5 @@ public class SummerVacationDAL
             return parks;
         }
       }
-}
+    }
+    
